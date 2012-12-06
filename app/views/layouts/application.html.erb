@@ -6,9 +6,23 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+  	<div class="container">
+    <a id="logo" href="#">Startup The City</a>
+    <nav>
+	    <ul class="nav pull-right">
+	      <li><a href="#">Events</a></li>
+	      <li><a href="#">Classes</a></li>
+	    </ul>
+	</nav>
+	</div>
+  </div>
+</div>
 <body>
-
-<%= yield %>
+	<div id="page">
+		<%= yield %>
+	</div>
 
 </body>
 </html>
