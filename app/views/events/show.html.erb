@@ -1,0 +1,49 @@
+<div class="event-title container">
+	<div class="row center">
+		<b><%= @event.title %></b>
+	</div>
+</div>
+<div class="container">
+	<div class="when-box">
+		<div class="when-left">
+			When
+		</div>
+		<div class="when-date">
+			<%=@event.date.strftime("%B %d, %I:%M%p")%>
+		</div>
+		<div class="export">
+			Export to calendar: Google | Yahoo | Outlook
+		</div>
+	</div>
+	<div class="where-box">
+		<div class="where-left">
+			Where
+		</div>
+		<div class="where-address">
+			<%=	@event.venue%>
+			<br />
+			<%=@event.address1%>, 
+			<%=@event.address2%>
+			<br />
+			<%=@event.city%>, <%= @event.state%>, <%= @event.country%>
+		</div>
+		<div class="map">
+		</div>
+	</div>
+	<div class="description-box">
+		<div class="description-left">
+			Description
+		</div>
+		<div class="description-text">
+			<%= simple_format(@event.description) %>
+		</div>
+	</div>
+	<div class="submit_button">
+		<h1 class="center">
+			<%= link_to "JOIN EVENT!", "#{@event.url}", :class => "btn btn-large btn-primary"%>
+		</h1>
+	</div>
+</div>
+
+
+

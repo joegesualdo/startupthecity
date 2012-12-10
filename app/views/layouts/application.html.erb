@@ -9,7 +9,7 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
   	<div class="container">
-    <a id="logo" href="#">Startup The City</a>
+  	<%= link_to "Startup The City", root_path, id: "logo"%>
     <nav>
 	    <ul class="nav pull-right">
 	      <li><a href="#">Events</a></li>
@@ -23,6 +23,5 @@
 	<div id="page">
 		<%= yield %>
 	</div>
-
 </body>
 </html>

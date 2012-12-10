@@ -20,7 +20,7 @@ NAV
 #logo{
 	float: left;
 	margin-right: 10px;
-	font-size: 1.7em;
+	font-size: 2em;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: -1px;
@@ -58,58 +58,238 @@ EVENT
 .event{
 	width: 100%;
 	float: left;
-	margin-top: 20px;
 	border-top: solid;
+	border-width:1px;
 }
+
+.events:hover
+{
+
+	background-color: #F5F5F5;
+}
+
 
 .event-inner{
 	float: left;
 	margin: 10px;
 }
 .calendar{
+	border: solid;
 	float:left;
-	background-color: black;
+
 	height: 85px;
 	width: 75px;
 }
 
 .month{
-	padding-top: 5px;
+	border-bottom: solid;
+	padding-top: 2px;
 	color: black;
-	height: 25px;
+	height: 20px;
 	width: 75px;
 	background-color: gray;
+	font-size: 1.7em;
 }
 
 .day{
-	padding-top: 10px;
-	color: white;
+	padding-top: 2px;
+	color: black;
 }
 
 .title-description{
 	float: left;
 	margin-left:20px;
-	width: 75%%;
+	width: 585px;
+}
+
+.events a:link{
+	color: black;
+}
+
+.events a:visited{
+	color:black;
+}
+
+.events a:hover{
+	cursor: default;
+	text-decoration: none;
+	color: black;
 }
 
 .title{
+
+
 }
 
 .time-price{
 	margin-left: 20px;
+
 	float: left;
 	height: 81px;
-	width: 75px;
+	width: 200px;
 }
 .time{
-	height: 30px;
-	background-color: black;
-	color: white;
+	width: 80px;
+	float: left;
+	height: 26px;
+	border: solid;
+	color: black;
 }
 
 .price{
-	margin-top:20px;
-	height: 30px;
-	background-color: black;
-	color: white;
+	float:right;
+	width: 80px;
+	height: 26px;
+	border: solid;
+	color: black;
 }
+
+.short-description{
+	height: 100%;
+	padding-top: 10px;
+	font-size:1.1em;
+
+}
+
+/*********************
+EVENT PAGE
+**********************/
+
+
+.event-title{
+	font-size: 3em;
+	padding-top:50px;
+	padding-bottom: 50px;
+	line-height: 40px;
+}
+
+.when-box{
+}
+.when-left{
+	float:left;
+	width: 400px;
+	font-size: 2em;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.when-date{
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.export{
+	float: left;
+	padding-left:100px;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.where-box{
+	border-top: solid;
+
+}
+.where-left{
+	float:left;
+	width: 400px;
+	font-size: 2em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.where-address{
+	float: left;
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.map{
+	float: left;
+	padding-left:100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.event-page{
+	height: 900px;
+}
+
+
+.description-box{
+	height: 200px;
+
+}
+.description-left{
+	float:left;
+	width: 400px;
+	font-size: 2em;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.description-text{
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+/*********************
+form
+**********************/
+
+
+body{
+	font-family:"Times New Roman", Times, serif;
+}
+
+.event_link span {
+width:100%;
+height:100%;
+position:absolute;
+z-index:2;
+top:0px;
+left:0px;
+ }
+
+.tags{
+	float:left;
+	background-color:black;
+	color: white;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding: 3px;
+}
+
+textarea.short_description {
+        height: 6em;
+        width: 100%;
+}
+
+textarea.long_description {
+        height: 20em;
+        width: 100%;
+}
+
+input.title_input{
+	width: 30em;
+}
+
+select{
+	width: 10em;
+}
+
+.submit_button{
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+
+
+

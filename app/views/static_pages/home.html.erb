@@ -1,260 +1,52 @@
 <div id="banner">
 	<div class="bannerquote container">
-	NYCs best source of Entrepreneurship, Startup and Technology events
+	<p> NYC's Entrepreneurship, Startup and Technology events</p>
 	</div>
 </div>
-
-<div class="events container">
+<% @events.each do |i| %>
+<%if DateTime.now.beginning_of_day < i.date %>
+<% if i.cost == 0 %>
+	<%cost = "FREE" %>
+<%else%>
+	<% cost = "$#{i.cost}" %>
+<%end%>
+<div class="events container" onclick="window.location = '/events/<%= i.id%>'">
 	<div class="event">
 		<div class="event-inner">
 			<div class="calendar">
 				<div class="month">
-					<h4 class="center"> December </h4>
+					<p class="center"><%= i.date.strftime("%b")%></p>
 				</div>
 				<div class="day center">
-					<h1>3</h1>
+					<h1><%= i.date.strftime("%d")%></h1>
+					<h4><%= i.date.strftime("%A")%></h4>
 				</div>
 			</div>
 			<div class="title-description">
 				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
+					<h1><%= link_to i.title, i %></h1>
 				</div>
 				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
+					<p><%= i.shortdescription %></p>
 				</div>
 			</div>
 			<div class="time-price">
 				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
+					<h3 class="center"><%= i.date.strftime("%I:%M %p").downcase %></h3>
 				</div>
 				<div class="price">
-					<h3 class="center"> $20</h3>
+					<h3 class="center"><%= cost %></h3>
 				</div>
 			</div>
 		</div>
+	<%if i.course == true %>
 	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h4 class="center"> December </h4>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
+		<div class="tags">
+			<h4>Class<h4>
 	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h4 class="center"> December </h4>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h4 class="center"> December </h4>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h4 class="center"> December </h4>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h4 class="center"> December </h4>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h5 class="center"> December </h5>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h5 class="center"> December </h5>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="event">
-		<div class="event-inner">
-			<div class="calendar">
-				<div class="month">
-					<h5 class="center"> December </h5>
-				</div>
-				<div class="day center">
-					<h1>3</h1>
-				</div>
-			</div>
-			<div class="title-description">
-				<div class="title">
-					<h1>#techdrinkup - Rooftop Party</h1>
-				</div>
-				<div class="short-description">
-					<p>A party for NYC's brightest and savviest people in tech to get together at exclusive NYC venues and mingle over drinks and food.</p>
-				</div>
-			</div>
-			<div class="time-price">
-				<div class="time">
-					<h3 class="center"> 7:00pm</h3>
-				</div>
-				<div class="price">
-					<h3 class="center"> $20</h3>
-				</div>
-			</div>
-		</div>
-	</div>
+	<%end%>
 </div>
+</div>
+</a>
+<%end%>
+<%end%>
