@@ -2,6 +2,12 @@ Startupthecity::Application.routes.draw do
 
   root to: 'static_pages#home'
 
+  match "/free", to: 'static_pages#free'
+
+  match "/twenty", to: 'static_pages#twenty'
+
+  match "/fifty", to: 'static_pages#fifty'
+
   resources :events
 
   # The priority is based upon order of creation:

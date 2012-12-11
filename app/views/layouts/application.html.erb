@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Startupthecity</title>
+  <title>Startup The City</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -12,8 +12,19 @@
   	<%= link_to "Startup The City", root_path, id: "logo"%>
     <nav>
 	    <ul class="nav pull-right">
-	      <li><a href="#">Events</a></li>
-	      <li><a href="#">Classes</a></li>
+	      <li>
+	      		<div class="btn-group">
+  					<a class="btn btn-primary btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+    				<h3><b>Price</b></h3>
+  					</a>
+  					<ul class="dropdown-menu">
+  						<li><h3><b><%=link_to "Any", root_path %></b></h3></li>
+    					<li><h3><b><%=link_to "Free", free_path %></b></h3></li>
+    					<li><h3><b><%=link_to "$20", twenty_path %></b></h3></li>
+    					<li><h3><b><%=link_to "$50", fifty_path %></b></h3></li>
+  					</ul>
+				</div>
+			</li>
 	    </ul>
 	</nav>
 	</div>
