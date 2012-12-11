@@ -56,6 +56,8 @@ module Startupthecity
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    config.action_controller.perform_caching = false
+
     config.assets.compile = true
 
     # Version of your assets, change this if you want to expire all your assets
