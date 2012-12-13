@@ -2,7 +2,6 @@
 	<div class="bannerquote container">
 	<p>NYC STARTUPS: GET INVOLVED</p>
 	</div>
-
 </div>
 <% @events.each do |i| %>
 <%if DateTime.now.beginning_of_day < i.date && i.cost <= 50 %>
@@ -11,7 +10,7 @@
 <%else%>
 	<% cost = "$#{i.cost}" %>
 <%end%>
-<<div class="events container" onclick="window.location = '/events/<%= i.id%>'">
+<div class="events container" onclick="window.location = '/events/<%= i.id%>'">
 	<div class="event">
 		<div class="event-inner">
 					<strong class="PriceContainer"><strong class="pricee"><%=cost%></strong></strong>
