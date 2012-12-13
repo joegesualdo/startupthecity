@@ -2,6 +2,10 @@
 /*********************
 GENERAL
 **********************/
+body{
+	background-image: url('/assets/billie_holiday_@2X.png');
+}
+
 .center{
 	text-align: center;
 }
@@ -39,9 +43,12 @@ HOMEPAGE
 **********************/
 #banner{
 	line-height: 60px;
-	height: 300px;
-	background-image: url('/assets/skyline.jpeg');
+	background-image: url('/assets/Lower-Manhattan.jpg');
 	border-bottom: solid;
+	background-size: 100%;
+	height: 400px;
+	width:1300px;
+	z-index:-12;
 }
 
 .bannerquote{
@@ -58,14 +65,14 @@ EVENT
 .event{
 	width: 100%;
 	float: left;
-	border-top: solid;
+	border-bottom: solid;
 	border-width:1px;
+	overflow: hidden;
 }
 
-.events:hover
+.events:hover .month
 {
-
-	background-color: #F5F5F5;
+	background-image: url('/assets/seamlesstexture2_1200.jpg');
 }
 
 
@@ -84,10 +91,9 @@ EVENT
 .month{
 	border-bottom: solid;
 	padding-top: 2px;
-	color: black;
 	height: 20px;
 	width: 80px;
-	background-color: gray;
+	color: black;
 	font-size: 1.7em;
 }
 
@@ -133,18 +139,12 @@ EVENT
 	float: left;
 	height: 26px;
 	color: black;
-	border:2px solid;
-	border-radius:12px;
-	-moz-border-radius:12px; /* Old Firefox */
 }
 
 .price{
 	float:right;
 	width: 80px;
 	height: 26px;
-	border:2px solid;
-	border-radius:12px;
-	-moz-border-radius:12px; /* Old Firefox */
 	color: black;
 }
 
@@ -294,6 +294,33 @@ select{
 	width: 100%;
 }
 
+.PriceContainer{
+	position:relative;
+	z-index:0;
+	top:-15px;
+	right:-870px;
+	width:110px;
+	height:110px;
+	overflow:hidden
+}
+.pricee{
+	position:absolute;
+	z-index:2;
+	top:19px;
+	left:-28px;
+	width:125px;
+	height:30px;
+	padding-top:8px;
+	text-align:center;
+	font-size:11px;
+	color:#524d4d;
+	background-color:#f2f0f0;
+	overflow:hidden;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+}
 
 
 
