@@ -35,15 +35,37 @@
 	<%= f.label :country %>
 	<%= f.text_field :country, :value => "United States"  %> 
 </div>
-
 	<%= f.label :shortdescription %>
 	<%= f.text_area :shortdescription, :class =>'short_description'  %> 
 
 	<%= f.label :description %>
 	<%= f.text_area :description, :class =>'long_description' %>
 
-	<%= f.label :course %>
+	<h1>Class</h1>
+	<%= f.label :course, image_tag("/assets/pencil.png") %>
 	<%= f.check_box :course %>
+
+	<hr>
+	<h1>Food</h1>
+	<%= f.label :food, image_tag("/assets/restaurant.png") %>
+	<%= f.check_box :food %>
+
+	<hr>
+	<h1>Speaker</h1>
+	<%= f.label :speaker, image_tag("/assets/microphone.png") %>
+	<%= f.check_box :speaker %>
+
+	<hr>
+	<h1>Coctails/Party</h1>
+	<%= f.label :party, image_tag("/assets/cocktail.png") %>
+	<%= f.check_box :party %>
+
+	<hr>
+	<h1>Hackathon</h1>
+	<%= f.label :hackathon, image_tag("/assets/laptop.png") %>
+	<%= f.check_box :hackathon %>
+
+	<hr>
 
 	<br />
 	<br />

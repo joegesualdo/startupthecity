@@ -4,7 +4,7 @@
 #
 #  id               :integer          not null, primary key
 #  title            :string(255)
-#  date             :date
+#  date             :datetime
 #  time             :time
 #  venue            :string(255)
 #  address1         :string(255)
@@ -19,6 +19,10 @@
 #  course           :boolean
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  food             :boolean
+#  speaker          :boolean
+#  party            :boolean
+#  hackathon        :boolean
 #
 
 require 'test_helper'

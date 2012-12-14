@@ -46,6 +46,29 @@
 						<img src="/assets/pencil.png">
 					</div>
 				<%else%>
+				<%if i.speaker == true %>
+					<div class="icon_image">
+						<img src="/assets/microphone.png">
+					</div>
+				<%else%>
+				<%if i.party == true %>
+					<div class="icon_image">
+						<img src="/assets/coctail.png">
+					</div>
+				<%else%>
+				<%if i.hackathon == true %>
+					<div class="icon_image">
+						<img src="/assets/laptop.png">
+					</div>
+				<%if i.food == true %>
+					<div class="icon_image">
+						<img src="/assets/restaurant.png">
+					</div>
+				<%else%>
+				<%end%>
+				<%end%>
+				<%end%>
+				<%end%>
 				<%end%>
 			</div>
 		</div>
