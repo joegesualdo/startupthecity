@@ -1,9 +1,4 @@
-<div class="container banner">
-	<div class="bannerquote container">
-<p>Get Involved</p>
-	</div>
 
-</div>
 <% @events.each do |i| %>
 <%if DateTime.now.beginning_of_day < i.date && i.cost == 0 %>
 <% if i.cost == 0 %>
