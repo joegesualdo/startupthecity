@@ -310,6 +310,61 @@ select{
 }
 
 
+#leftsidenav {
+	background: #F4F4F4;
+	border: 1px solid #BEBEBE;
+	border-left: none;
+	height: 110px;
+	left: 0;
+	position: fixed;
+	top: 125px;
+	width: 30px;
+	padding-top:1px;
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.10);
+	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.10);
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.10);
+}
+
+#leftsidetwitter{
+	margin:1px;
+	width: 30px;
+	height: 30px;
+	background: url("/assets/twitter.png") no-repeat;
+	background-position: 0px 0px;
+}
+#leftsidetwitter:hover{
+	cursor:pointer;
+}
+
+#leftsidefacebook{
+	margin:1px;
+	width: 30px;
+	height: 30px;
+	background: url("/assets/facebook.png") no-repeat;
+	background-position: 0px 0px;
+}
+#leftsidefacebook:hover{
+	cursor:pointer;
+}
+
+
+.tooltip{display:inline;position:relative}
+.tooltip:hover{text-decoration:none}
+.tooltip:hover:after{
+   color:#888;
+   content:attr(title);
+   display:block;
+   bottom:7px;
+   left:35px;
+   position:absolute;
+   white-space:nowrap;
+}
 
 
 
