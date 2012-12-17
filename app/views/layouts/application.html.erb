@@ -9,6 +9,16 @@
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
   	<div class="container">
@@ -36,10 +46,10 @@
 <body>
 
 <!-- LEFT SIDE NAV -->
-    <div id="leftsidenav">
+    <!-- <div id="leftsidenav">
       <a href="https://twitter.com/StartupTheCity" target="_blank" title="Blog" class="tooltip"><div id="leftsidetwitter"></div></a>  
       <a href="https://www.facebook.com/pages/Startup-The-City/458169887580591" target="_blank" title="About" class="tooltip"><div id="leftsidefacebook"></div></a>
-    </div>
+    </div> -->
   <!-- END LEFT SIDE NAV -->
 
 	<div id="page">

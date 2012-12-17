@@ -14,7 +14,7 @@
 		</div>
 	</div>
 	<div class="map_eventpage">
-		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1}+#{@event.address2}+#{@event.city}+#{@event.state}".parameterize%>&zoom=13&size=350x300&markers=<%="#{@event.address1}+#{@event.address2}+#{@event.city}+#{@event.state}".parameterize%>&sensor=false"> 
+		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1},#{@event.city}, #{@event.state}"%>&zoom=13&size=350x300&markers=<%="#{@event.address1},#{@event.city},#{@event.state}"%>&sensor=false"> 
 		<br> 
 		<a href="http://www.google.com/calendar/event?
 		action=TEMPLATE
@@ -54,35 +54,7 @@
 		</div>
 	</div>
 	<div class="description_eventpage">
-	<%if @event.course == true %>
-					<div class="icon_image">
-						<img src="/assets/pencil.png">
-					</div>
-				<%else%>
-				<%if @event.speaker == true %>
-					<div class="icon_image">
-						<img src="/assets/microphone.png">
-					</div>
-				<%else%>
-				<%if @event.party == true %>
-					<div class="icon_image">
-						<img src="/assets/cocktail.png">
-					</div>
-				<%else%>
-				<%if @event.hackathon == true %>
-					<div class="icon_image">
-						<img src="/assets/laptop.png">
-					</div>
-				<%if @event.food == true %>
-					<div class="icon_image">
-						<img src="/assets/restaurant.png">
-					</div>
-				<%else%>
-				<%end%>
-				<%end%>
-				<%end%>
-				<%end%>
-				<%end%><%=simple_format(@event.description)%>
+	<%=simple_format(@event.description)%>
 	</div>
 	<div class="submit_button">
 		<h1 class="center">
@@ -90,6 +62,10 @@
 		</h1>
 	</div>
 </div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%="http://www.startupthecity.com/events/#{@event.id}"%> data-via="startupthecity" data-lang="en" data-text="I'm attending '<%= @event.title %>'">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<div class="fb-like" data-href=<%="http://www.startupthecity.com/events/#{@event.id}"%> data-send="true" data-width="450" data-show-faces="true"></div>
 
 
 
