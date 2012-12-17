@@ -43,16 +43,6 @@
 	</div>
 	<div class="map_eventpage">
 		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1},#{@event.city}, #{@event.state}"%>&zoom=13&size=350x300&markers=<%="#{@event.address1},#{@event.city},#{@event.state}"%>&sensor=false"> 
-		<br> 
-		Export event to Calendar: <a href="http://www.google.com/calendar/event?
-		action=TEMPLATE
-		&text=<%="#{@event.title}"%>
-		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
-		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
-		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
-		&trp=false
-		&sprop=LINK TO LMS GIG PAGE
-		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Google</a>
 	</div>
 		<div class="socialbox_eventpage">
 		<div class="socialicons_eventpage">
@@ -148,4 +138,14 @@ action=TEMPLATE
 
 " target="_blank">Google</a>
 
+Export event to Calendar: <a href="http://www.google.com/calendar/event?
+		action=TEMPLATE
+		&text=<%="#{@event.title}"%>
+		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
+		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
+		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
+		&trp=false
+		&sprop=LINK TO LMS GIG PAGE
+		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Google</a>
+		
  -->
