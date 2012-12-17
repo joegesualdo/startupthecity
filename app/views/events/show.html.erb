@@ -31,6 +31,18 @@
 
 		<%= link_to "Directions", "https://maps.google.com/maps?hl=en&q=#{@event.address1},#{@event.city},#{@event.state}&ie=UTF-8&hq=&hnear=0x89c25901ae3a7dfb:0x668d9dc3684d7119,#{@event.address1}, #{@event.city}, #{@event.state}&gl=us&ei=yZzOUK6BEeu00AGHrIDwBw&ved=0CDIQ8gEwAA", :class => "directions"%>
 	</div>
+	<div class="socialbox_eventpage">
+		<div class="socialicons_eventpage">
+
+<div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%="http://www.startupthecity.com/events/#{@event.id}"%> data-via="startupthecity" data-lang="en" data-text="I'm attending '<%= @event.title %>'">Tweet</a>
+
+
+
+
+		</div>
+	</div>
 	<div class="datebox_eventpage">
 		<div class="calendaricon_eventpage">
 		</div>
@@ -66,15 +78,6 @@
 	</div>
 </div>
 <a href="https://twitter.com/share" class="twitter-share-button" data-url=<%="http://www.startupthecity.com/events/#{@event.id}"%> data-via="startupthecity" data-lang="en" data-text="I'm attending '<%= @event.title %>'">Tweet</a>
-
-<a href="https://www.facebook.com/dialog/feed?
-  app_id=100004860452494&
-  link=https://developers.facebook.com/docs/reference/dialogs/&
-  picture=http://fbrell.com/f8.jpg&
-  name=Facebook%20Dialogs&
-  caption=Reference%20Documentation&
-  description=Using%20Dialogs%20to%20interact%20with%20users.&
-  redirect_uri=https://mighty-lowlands-6381.herokuapp.com/">Face</a>
 
 
 
