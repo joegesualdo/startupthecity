@@ -173,12 +173,16 @@ NEW EVENT PAGE
 }
 
 .socialbox_eventpage{
-	margin-top: 5px;
+	padding-left: 10px;
+	padding-top: 10px;
 	float: left;
-	width: 575px;
-	height: 25px;
-	border-bottom: solid;
+	width: 565px;
+	height: 35px;
 	border-width: 1px;
+	border-bottom: solid;
+	border-top: solid;
+
+	background-color: gray;
 }
 
 
@@ -195,8 +199,8 @@ NEW EVENT PAGE
 
 .clockicon_eventpage{
 	float: left;
-	width: 46px;
-	height: 46px;
+	width: 48px;
+	height: 48px;
 	background-image: url('/assets/clock.png');
 }
 .time_eventpage{
@@ -221,8 +225,8 @@ NEW EVENT PAGE
 
 .calendaricon_eventpage{
 	float: left;
-	width: 46px;
-	height: 46px;
+	width: 48px;
+	height: 48px;
 	background-image: url('/assets/calendar.png');
 }
 .date_eventpage{
@@ -243,8 +247,8 @@ NEW EVENT PAGE
 
 .whereicon_eventpage{
 	float: left;
-	width: 30px;
-	height: 46px;
+	width: 48px;
+	height: 48px;
 	background-image: url('/assets/pushpin.png');
 }
 .where_eventpage{
