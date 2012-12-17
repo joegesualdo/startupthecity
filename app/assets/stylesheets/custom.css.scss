@@ -188,7 +188,7 @@ NEW EVENT PAGE
 .timebox_eventpage{
 	margin-top: 10px;
 	float: left;
-	width: 255px;
+	width: 150px;
 	height: 50px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -203,18 +203,15 @@ NEW EVENT PAGE
 .time_eventpage{
 	float: left;
 	padding-top: 15px;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	padding-left: 10px;
 }
-.map_eventpage{
-	float: right;
-	margin-top: 20px;
-}
+
 
 .datebox_eventpage{
-	margin-top: 10px;
+	padding-top: 10px;
 	float: left;
-	width: 320px;
+	width: 260px;
 	height: 50px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -229,14 +226,14 @@ NEW EVENT PAGE
 .date_eventpage{
 	float: left;
 	padding-top: 15px;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	padding-left: 10px;
 }
 
 .wherebox_eventpage{
 	margin-top: 10px;
 	float: left;
-	width: 575px;
+	width: 525px;
 	height: 50px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -279,7 +276,7 @@ NEW EVENT PAGE
 }
 .map_eventpage{
 	float: right;
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 .description_eventpage{

@@ -16,21 +16,6 @@
 			<%end%>
 		</div>
 	</div>
-	<div class="map_eventpage">
-		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1},#{@event.city}, #{@event.state}"%>&zoom=13&size=350x300&markers=<%="#{@event.address1},#{@event.city},#{@event.state}"%>&sensor=false"> 
-		<br> 
-		<a href="http://www.google.com/calendar/event?
-		action=TEMPLATE
-		&text=<%="#{@event.title}"%>
-		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
-		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
-		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
-		&trp=false
-		&sprop=LINK TO LMS GIG PAGE
-		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Export</a>
-
-		<%= link_to "Directions", "https://maps.google.com/maps?hl=en&q=#{@event.address1},#{@event.city},#{@event.state}&ie=UTF-8&hq=&hnear=0x89c25901ae3a7dfb:0x668d9dc3684d7119,#{@event.address1}, #{@event.city}, #{@event.state}&gl=us&ei=yZzOUK6BEeu00AGHrIDwBw&ved=0CDIQ8gEwAA", :class => "directions"%>
-	</div>
 	<div class="datebox_eventpage">
 		<div class="calendaricon_eventpage">
 		</div>
@@ -55,6 +40,21 @@
 			<%=@event.address2%>
 			<%=@event.city%>, <%= @event.state%>, <%= @event.country%>
 		</div>
+	</div>
+	<div class="map_eventpage">
+		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1},#{@event.city}, #{@event.state}"%>&zoom=13&size=350x300&markers=<%="#{@event.address1},#{@event.city},#{@event.state}"%>&sensor=false"> 
+		<br> 
+		<a href="http://www.google.com/calendar/event?
+		action=TEMPLATE
+		&text=<%="#{@event.title}"%>
+		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
+		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
+		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
+		&trp=false
+		&sprop=LINK TO LMS GIG PAGE
+		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Export</a>
+
+		<%= link_to "Directions", "https://maps.google.com/maps?hl=en&q=#{@event.address1},#{@event.city},#{@event.state}&ie=UTF-8&hq=&hnear=0x89c25901ae3a7dfb:0x668d9dc3684d7119,#{@event.address1}, #{@event.city}, #{@event.state}&gl=us&ei=yZzOUK6BEeu00AGHrIDwBw&ved=0CDIQ8gEwAA", :class => "directions"%>
 	</div>
 		<div class="socialbox_eventpage">
 		<div class="socialicons_eventpage">
