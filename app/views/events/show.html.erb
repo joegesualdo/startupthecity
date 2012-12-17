@@ -44,7 +44,7 @@
 	<div class="map_eventpage">
 		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1},#{@event.city}, #{@event.state}"%>&zoom=13&size=350x300&markers=<%="#{@event.address1},#{@event.city},#{@event.state}"%>&sensor=false"> 
 		<br> 
-		<a href="http://www.google.com/calendar/event?
+		Export event to Calendar: <a href="http://www.google.com/calendar/event?
 		action=TEMPLATE
 		&text=<%="#{@event.title}"%>
 		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
@@ -52,14 +52,12 @@
 		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
 		&trp=false
 		&sprop=LINK TO LMS GIG PAGE
-		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Export</a>
-
-		<%= link_to "Directions", "https://maps.google.com/maps?hl=en&q=#{@event.address1},#{@event.city},#{@event.state}&ie=UTF-8&hq=&hnear=0x89c25901ae3a7dfb:0x668d9dc3684d7119,#{@event.address1}, #{@event.city}, #{@event.state}&gl=us&ei=yZzOUK6BEeu00AGHrIDwBw&ved=0CDIQ8gEwAA", :class => "directions"%>
+		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Google</a>
 	</div>
 		<div class="socialbox_eventpage">
 		<div class="socialicons_eventpage">
 
-<div class="fb-like" data-send="true" data-width="400" data-show-faces="false"></div>
+<div class="fb-like" data-send="true" data-width="410" data-show-faces="false"></div>
 
 			<a href="https://twitter.com/share" class="twitter-share-button" data-url=<%="http://www.startupthecity.com/events/#{@event.id}"%> data-via="startupthecity" data-lang="en" data-text="I'm attending '<%= @event.title %>'">Tweet</a>
 
@@ -73,7 +71,7 @@
 	</div>
 	<div class="submit_button">
 		<h1 class="center">
-			<%= link_to "JOIN EVENT!", "#{@event.url}?ref=startupthecity", :class => "btn btn-large btn-primary"%>
+			<%= link_to "Event Page!", "#{@event.url}?ref=startupthecity", :class => "btn btn-large btn-primary"%>
 		</h1>
 	</div>
 </div>
