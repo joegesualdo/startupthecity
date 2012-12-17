@@ -1,4 +1,103 @@
-<div class="event-title container">
+<div class="container">
+	<div class="title_eventpage center">
+		<b><%= @event.title %></b>
+	</div>
+	<div class="costbox_eventpage">
+		<div class="costicon_eventpage">
+		</div>
+		<div class="cost_eventpage">
+			<%if @event.cost == 0%>
+				<%= "FREE" %>
+			<%else%>
+				<%=@event.cost%>
+			<%end%>
+		</div>
+	</div>
+	<div class="map_eventpage">
+		<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1}+#{@event.address2}+#{@event.city}+#{@event.state}".parameterize%>&zoom=13&size=350x300&markers=<%="#{@event.address1}+#{@event.address2}+#{@event.city}+#{@event.state}".parameterize%>&sensor=false"> 
+		<br> 
+		<a href="http://www.google.com/calendar/event?
+		action=TEMPLATE
+		&text=<%="#{@event.title}"%>
+		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
+		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
+		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
+		&trp=false
+		&sprop=LINK TO LMS GIG PAGE
+		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Export</a>
+
+		<%= link_to "Directions", "https://maps.google.com/maps?hl=en&q=#{@event.address1},#{@event.city},#{@event.state}&ie=UTF-8&hq=&hnear=0x89c25901ae3a7dfb:0x668d9dc3684d7119,#{@event.address1}, #{@event.city}, #{@event.state}&gl=us&ei=yZzOUK6BEeu00AGHrIDwBw&ved=0CDIQ8gEwAA", :class => "directions"%>
+	</div>
+	<div class="datebox_eventpage">
+		<div class="calendaricon_eventpage">
+		</div>
+		<div class="date_eventpage">
+			<%=@event.date.strftime("%A, %B %d")%>
+		</div>
+	</div>
+	<div class="timebox_eventpage">
+		<div class="clockicon_eventpage">
+		</div>
+		<div class="time_eventpage">
+			<%=@event.date.strftime("%I:%M%p")%>
+		</div>
+	</div>
+	<div class="wherebox_eventpage">
+		<div class="whereicon_eventpage">
+		</div>
+		<div class="where_eventpage">
+			<%=	@event.venue%>
+			<br />	
+			<%=@event.address1%>, 
+			<%=@event.address2%>
+			<%=@event.city%>, <%= @event.state%>, <%= @event.country%>
+		</div>
+	</div>
+	<div class="description_eventpage">
+	<%if @event.course == true %>
+					<div class="icon_image">
+						<img src="/assets/pencil.png">
+					</div>
+				<%else%>
+				<%if @event.speaker == true %>
+					<div class="icon_image">
+						<img src="/assets/microphone.png">
+					</div>
+				<%else%>
+				<%if @event.party == true %>
+					<div class="icon_image">
+						<img src="/assets/cocktail.png">
+					</div>
+				<%else%>
+				<%if @event.hackathon == true %>
+					<div class="icon_image">
+						<img src="/assets/laptop.png">
+					</div>
+				<%if @event.food == true %>
+					<div class="icon_image">
+						<img src="/assets/restaurant.png">
+					</div>
+				<%else%>
+				<%end%>
+				<%end%>
+				<%end%>
+				<%end%>
+				<%end%><%=simple_format(@event.description)%>
+	</div>
+	<div class="submit_button">
+		<h1 class="center">
+			<%= link_to "JOIN EVENT!", "#{@event.url}?ref=startupthecity", :class => "btn btn-large btn-primary"%>
+		</h1>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="event-title container">
 	<div class="row center">
 		<b><%= @event.title %></b>
 	</div>
@@ -45,6 +144,23 @@
 	</div>
 </div>
 
+<img src="https://maps.googleapis.com/maps/api/staticmap?center=<%="#{@event.address1}+#{@event.address2}+#{@event.city}+#{@event.state}".parameterize%>&zoom=13&size=300x300&markers=<%="#{@event.address1}+#{@event.address2}+#{@event.city}+#{@event.state}".parameterize%>&sensor=false">
 
 
 
+<a href="http://www.google.com/calendar/event?
+action=TEMPLATE
+&text=<%="#{@event.title}"%>
+&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
+&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
+&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
+&trp=false
+&sprop=LINK TO LMS GIG PAGE
+&sprop=name:LEEDS MUSIC SCENE
+
+
+
+
+" target="_blank">Google</a>
+
+ -->
