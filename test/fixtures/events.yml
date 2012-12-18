@@ -23,6 +23,7 @@
 #  speaker          :boolean
 #  party            :boolean
 #  hackathon        :boolean
+#  enddate          :datetime
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

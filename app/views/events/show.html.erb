@@ -75,9 +75,31 @@
 		<div class="where_eventpage">
 			<%=	@event.venue%>
 			<br />	
-			<%=@event.address1%><%=@event.address2%>
+			<%=@event.address1%> <%=@event.address2%>
 			<br />
 			<%=@event.city%>, <%= @event.state%>
+		</div>
+	</div>
+	<div class="exportbox_eventpage">
+		<div class="exportbutton_eventpage">
+			<div class="btn-group">
+  <a class="btn btn-large btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"></i> Add to Calendar  <span class="caret icon-white"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="http://www.google.com/calendar/event?
+		action=TEMPLATE
+		&text=<%="#{@event.title}"%>
+		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.enddate.strftime("%Y%m%dT%H%M%S")}"%>
+		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
+		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
+		&trp=false
+		&sprop=LINK TO LMS GIG PAGE
+		&sprop=name:LEEDS MUSIC SCENE" target="_blank"><i class="icon-calendar"></i> Google Calendar</a></li>
+    <li></li>
+    <li></li>
+    <li class="divider"></li>
+    <li></li>
+  </ul>
+</div>
 		</div>
 	</div>
 	  <div id="map_canvas" class="map_eventpage" style="width: 350px; height: 350px;"></div>
@@ -103,8 +125,16 @@
 	</div>
 </div>
 
-  <div id="map_canvas" style="width: 320px; height: 480px;"></div>
-</body>
+
+Export event to Calendar: <a href="http://www.google.com/calendar/event?
+		action=TEMPLATE
+		&text=<%="#{@event.title}"%>
+		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.enddate.strftime("%Y%m%dT%H%M%S")}"%>
+		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
+		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
+		&trp=false
+		&sprop=LINK TO LMS GIG PAGE
+		&sprop=name:LEEDS MUSIC SCENE" target="_blank" class="export_eventpage">Google</a>
 
 
 
@@ -181,7 +211,7 @@ action=TEMPLATE
 Export event to Calendar: <a href="http://www.google.com/calendar/event?
 		action=TEMPLATE
 		&text=<%="#{@event.title}"%>
-		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.date.strftime("%Y%m%dT%H%M%S")}"%>
+		&dates=<%="#{@event.date.strftime("%Y%m%dT%H%M%S")}/#{@event.enddate.strftime("%Y%m%dT%H%M%S")}"%>
 		&location=<%="#{@event.venue} #{@event.address1}, #{@event.city}, #{@event.state}"%>
 		&details=<%="http://www.startupthecity.com/events/#{@event.id}"%>
 		&trp=false

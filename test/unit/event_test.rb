@@ -23,6 +23,7 @@
 #  speaker          :boolean
 #  party            :boolean
 #  hackathon        :boolean
+#  enddate          :datetime
 #
 
 require 'test_helper'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121214010043) do
+ActiveRecord::Schema.define(:version => 20121218173836) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20121214010043) do
     t.boolean  "speaker"
     t.boolean  "party"
     t.boolean  "hackathon"
+    t.datetime "enddate"
   end
 
 end

@@ -23,10 +23,11 @@
 #  speaker          :boolean
 #  party            :boolean
 #  hackathon        :boolean
+#  enddate          :datetime
 #
 
 class Event < ActiveRecord::Base
-  attr_accessible :address1, :address2, :city, :cost, :country, :course, :date, :description, :food, :hackathon, :party, :shortdescription, :speaker, :state, :time, :title, :url, :venue
+  attr_accessible :address1, :address2, :city, :cost, :country, :course, :date, :description, :enddate, :food, :hackathon, :party, :shortdescription, :speaker, :state, :time, :title, :url, :venue
 
   default_scope order: 'events.date ASC'
 end

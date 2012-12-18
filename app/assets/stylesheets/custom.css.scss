@@ -234,7 +234,7 @@ NEW EVENT PAGE
 
 .wherebox_eventpage{
 	float: left;
-	width: 525px;
+	width: 250px;
 	height: 60px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -253,6 +253,21 @@ NEW EVENT PAGE
 	padding-top: 5px;
 	font-size: 1.2em;
 	padding-left: 10px;
+}
+
+.exportbox_eventpage{
+	float: left;
+	width: 279px;
+	height: 60px;
+	border-bottom: solid;
+	border-width: 1px;
+	padding-bottom: 5px;
+}
+
+.exportbutton_eventpage{
+	float: left;
+	padding-top: 15px;
+	font-size: 1.2em;
 }
 
 .costbox_eventpage{
@@ -288,9 +303,6 @@ NEW EVENT PAGE
 	margin-top: 10px;
 	text-align: justify;
 
-}
-.export_eventpage{
-	font-size: 1.5em;
 }
 
 .directions{

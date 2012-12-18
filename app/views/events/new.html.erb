@@ -8,6 +8,8 @@
 	<%= f.label "Date:" %>
 	<%= f.datetime_select :date, :order => [ :month, :day, :year], :ampm => true, :minute_step => 5, :size => 5, :datetime_separator => "<br /> Time: <br />", :time_separator => "", :class => 'date_input'%>
 
+	<%= f.label "End Date" %>
+	<%= f.datetime_select :enddate, :order => [ :month, :day, :year], :ampm => true, :minute_step => 5, :size => 5, :datetime_separator => "<br /> Time: <br />", :time_separator => "", :class => 'date_input'%>
 
 	<%= f.label :url %>
 	<%= f.text_field :url %> 
