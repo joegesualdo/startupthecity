@@ -69,18 +69,7 @@
 			<%=@event.date.strftime("%I:%M%p")%>
 		</div>
 	</div>
-	<div class="wherebox_eventpage">
-		<div class="whereicon_eventpage">
-		</div>
-		<div class="where_eventpage">
-			<%=	@event.venue%>
-			<br />	
-			<%=@event.address1%> <%=@event.address2%>
-			<br />
-			<%=@event.city%>, <%= @event.state%>
-		</div>
-	</div>
-	<div class="exportbox_eventpage">
+		<div class="exportbox_eventpage">
 		<div class="exportbutton_eventpage">
 			<div class="btn-group">
   <a class="btn btn-large btn-inverse dropdown-toggle" data-toggle="dropdown" href="#"></i> Add to Calendar  <span class="caret icon-white"></span></a>
@@ -100,6 +89,17 @@
     <li></li>
   </ul>
 </div>
+		</div>
+	</div>
+	<div class="wherebox_eventpage">
+		<div class="whereicon_eventpage">
+		</div>
+		<div class="where_eventpage">
+			<%=	@event.venue%>
+			<br />	
+			<%=@event.address1%> <%=@event.address2%>
+			<br />
+			<%=@event.city%>, <%= @event.state%>
 		</div>
 	</div>
 	  <div id="map_canvas" class="map_eventpage" style="width: 350px; height: 350px;"></div>

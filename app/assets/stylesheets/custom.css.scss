@@ -212,7 +212,7 @@ NEW EVENT PAGE
 .datebox_eventpage{
 	padding-top: 10px;
 	float: left;
-	width: 260px;
+	width: 240px;
 	height: 50px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -242,6 +242,7 @@ NEW EVENT PAGE
 }
 
 .whereicon_eventpage{
+	margin-left: 10px;
 	float: left;
 	margin-top: 4px;
 	width: 31px;
@@ -251,13 +252,13 @@ NEW EVENT PAGE
 .where_eventpage{
 	float: left;
 	padding-top: 5px;
-	font-size: 1.2em;
+	font-size: 1em;
 	padding-left: 10px;
 }
 
 .exportbox_eventpage{
 	float: left;
-	width: 149px;
+	width: 169px;
 	height: 60px;
 	border-bottom: solid;
 	border-width: 1px;
