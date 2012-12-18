@@ -233,10 +233,9 @@ NEW EVENT PAGE
 }
 
 .wherebox_eventpage{
-	margin-top: 10px;
 	float: left;
 	width: 525px;
-	height: 50px;
+	height: 60px;
 	border-bottom: solid;
 	border-width: 1px;
 	padding-bottom: 5px;
@@ -244,6 +243,7 @@ NEW EVENT PAGE
 
 .whereicon_eventpage{
 	float: left;
+	margin-top: 4px;
 	width: 31px;
 	height: 47px;
 	background-image: url('/assets/pushpin.png');

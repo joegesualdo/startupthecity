@@ -1,8 +1,12 @@
 <% provide(:title, "#{@event.title}") %>
 <% provide(:url, "http://www.startupthecity.com/events/#{@event.id}") %>
 
-<%address = "#{@event.address1},#{@event.city}, #{@event.state}" %>
+<%address = "#{@event.venue},#{@event.address1},#{@event.address2},#{@event.city},#{@event.state}" %>
 
+<!--****************************************
+*******START GOOGLE MAPS JAVASCIPT******
+****************************************
+-->
 <script>
   var geocoder;
   var map;
@@ -30,6 +34,10 @@
   }
 
   </script>
+<!--****************************************
+*******END GOOGLE MAPS JAVASCIPT********
+****************************************
+-->
 
 
 <div class="container">
@@ -67,9 +75,9 @@
 		<div class="where_eventpage">
 			<%=	@event.venue%>
 			<br />	
-			<%=@event.address1%>, 
-			<%=@event.address2%>
-			<%=@event.city%>, <%= @event.state%>, <%= @event.country%>
+			<%=@event.address1%><%=@event.address2%>
+			<br />
+			<%=@event.city%>, <%= @event.state%>
 		</div>
 	</div>
 	  <div id="map_canvas" class="map_eventpage" style="width: 350px; height: 350px;"></div>
