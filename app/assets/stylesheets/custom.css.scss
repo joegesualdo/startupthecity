@@ -167,8 +167,9 @@ NEW EVENT PAGE
 	margin-top: 20px;
 	padding-top: 20px;
 	width: 85%;
-	height: 30px;
+	height: 57px;
 	font-size: 2em;
+	line-height:25px;
 	border-width: 7px;
 }
 
@@ -275,21 +276,21 @@ NEW EVENT PAGE
 	margin-top: 20px;
 	float: left;
 	width: 15%;
-	height: 50px;
+	height: 77px;
 	border-bottom: solid;
-	 border-width: 7px;
+	border-width: 7px;
 }
 
 .costicon_eventpage{
 	float: left;
-	margin-top: 5px;
+	margin-top: 20px;
 	width: 42px;
 	height: 42px;
 	background-image: url('/assets/dollar.png');
 }
 .cost_eventpage{
 	float: left;
-	padding-top: 17px;
+	padding-top: 31px;
 	font-size: 1.2em;
 	font-size: 2.8em;
 }
