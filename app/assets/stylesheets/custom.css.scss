@@ -3,8 +3,9 @@
 GENERAL
 **********************/
 body{
-	margin-top: 7px;
+	margin-top:45px;
 	background-image: url('/assets/billie_holiday_@2X.png');
+	padding-bottom: 100px;
 }
 
 .center{
@@ -15,7 +16,6 @@ body{
 BODY
 **********************/
 #page{
-	padding-top:40px;
 }
 
 /*********************
@@ -188,7 +188,7 @@ NEW EVENT PAGE
 .timebox_eventpage{
 	margin-top: 10px;
 	float: left;
-	width: 150px;
+	width: 140px;
 	height: 50px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -212,7 +212,7 @@ NEW EVENT PAGE
 .datebox_eventpage{
 	padding-top: 10px;
 	float: left;
-	width: 240px;
+	width: 250px;
 	height: 50px;
 	border-bottom: solid;
 	border-width: 1px;
@@ -426,17 +426,25 @@ left:0px;
 }
 
 textarea.short_description {
-        height: 6em;
+        height: 7em;
         width: 100%;
 }
 
 textarea.long_description {
-        height: 20em;
+        height: 7em;
         width: 100%;
 }
 
 input.title_input{
-	width: 30em;
+	width: 25em;
+}
+
+input.cost_input{
+	width: 5em;
+}
+
+input.url_input{
+	width: 25em;
 }
 
 select{
@@ -447,7 +455,14 @@ select{
 	float: left;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	width: 100%;
+	width: 75%;
+}
+
+.edit_button{
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 25%;
 }
 
 .icons{

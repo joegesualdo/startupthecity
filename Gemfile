@@ -24,6 +24,8 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass'
 
+gem 'devise'
+
 gem 'annotate', group: :development
 
 # To use ActiveModel has_secure_password

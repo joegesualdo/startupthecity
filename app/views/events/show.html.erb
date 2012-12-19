@@ -120,9 +120,16 @@
 	</div>
 	<div class="submit_button">
 		<h1 class="center">
-			<%= link_to "Event Page!", "#{@event.url}?ref=startupthecity", :class => "btn btn-large btn-inverse"%>
+			<%= link_to "GET TICKETS AT THE EVENT PAGE!", "#{@event.url}?ref=startupthecity", :class => "btn btn-large btn-inverse"%>
 		</h1>
 	</div>
+	<%if user_signed_in?%>
+		<div class="edit_button">
+			<h1 class="center">
+				<%= link_to "Edit Event", edit_event_path, :class => "btn btn-large btn-danger"%>
+			</h1>
+		</div>
+	<%end%>
 </div>
 
 

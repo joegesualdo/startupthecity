@@ -1,5 +1,7 @@
 Startupthecity::Application.routes.draw do
 
+  devise_for :users
+
   root to: 'static_pages#home'
 
   match "/free", to: 'static_pages#free'

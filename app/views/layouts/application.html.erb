@@ -16,6 +16,26 @@
 <meta property="og:site_name" content="Site Name" />
 <meta property="fb:admins" content="100004860452494" />
 
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--Start Google Analytics-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37163488-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!--End Google Analytics-->
+
 </head>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -33,14 +53,16 @@
     </script>
 
 <div id="fb-root"></div>
-
-
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
   	<div class="container">
   	<%= link_to "Startup The City", root_path, id: "logo"%>
     <nav>
 	    <ul class="nav pull-right">
+        <%if user_signed_in? %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+          </li>
+        <%end%>
 	      <li>
 	      		<div class="btn-group">
   					<a class="btn btn-inverse btn-small dropdown-toggle" data-toggle="dropdown" href="#">
@@ -61,6 +83,13 @@
 </div>
 <body onload="initialize()">
 
+    <%if notice %>
+      <p class="alert"><%= notice %></p>
+  <%end%>
+  <%if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+  <%end %>
+
 <!-- LEFT SIDE NAV -->
     <!-- <div id="leftsidenav">
       <a href="https://twitter.com/StartupTheCity" target="_blank" title="Blog" class="tooltip"><div id="leftsidetwitter"></div></a>  
@@ -68,8 +97,7 @@
     </div> -->
   <!-- END LEFT SIDE NAV -->
 
-	<div id="page">
 		<%= yield %>
-	</div>
 </body>
+
 </html>
